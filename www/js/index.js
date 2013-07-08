@@ -57,6 +57,9 @@ function scan(){
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
+		  if(result.format=='QR_CODE'){
+				window.location.href=result.text;
+		  }
       }, 
       function (error) {
           alert("Scanning failed: " + error);
